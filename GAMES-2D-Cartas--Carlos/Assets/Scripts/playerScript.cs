@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class playerScript : MonoBehaviour
+public class playerScript : BasePlayer
 {
     public GameObject gameManager;
 
+    public GameObject deckBack;
     void Start()
     {
         
@@ -17,19 +18,23 @@ public class playerScript : MonoBehaviour
 
     public void activateCards(bool enabled)
     {
-        Debug.Log("Deshabilitamos las cartas del jugador");
+        Debug.Log("activamos/desactivamos las cartas del jugador: " + this.name);
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<Button>().enabled = enabled;
-
+            deckBack.GetComponent<Button>().enabled = enabled;
         }
  
     }
 
-    public void play()
+    public override void gameTurn()
     {
-
-        gameManager.GetComponent<GameManager>().nextTurn();
+        if (isAlive())
+        {
+            Debug.Log("Turno del jugador: " + this.name);
+            startTurn();
+            activateCards(true);
+        }
 
     }
 

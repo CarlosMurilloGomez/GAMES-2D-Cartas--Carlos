@@ -4,5 +4,9 @@ using UnityEngine;
 public class ConfigValues : ScriptableObject
 {
     public int numberPlayers;
+
+    public int maxPlayers;
+
+    public int initialCards;
     
 }

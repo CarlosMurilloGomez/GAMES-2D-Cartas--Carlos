@@ -1,94 +1,110 @@
+using NUnit.Framework;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
     public ConfigValues config;
 
-    public GameObject deckGO;
-
-    public GameObject[] players;
-    public GameObject[] playerBacks;
+    public GameObject players;
 
     private int currentPlayer;
+
+    private bool playON;
+
+    public GameObject panelWin;
+    public TextMeshProUGUI panelWinText;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {//evita duplicados del objeto gameManager
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
     void Start()
     {
-        initDeck();
+        playON = false;
     }
 
     void Update()
     {
-
-    }
-    public void initDeck()
-    {
-        //Generar el amzo inicial
-        Debug.Log("Generamos el mazo inicial");
-        deckGO.GetComponent<DeckScript>().generateDeckIni();
-
-        //repartir 
-        toDealPlayers();
-
-        //desactivar las cartas al jugador hasta que le toque su turno
-        players[0].GetComponent<playerScript>().activateCards(false);
-
-        //añadir los poison
-        deckGO.GetComponent<DeckScript>().addPoison();
-
-        //comenzar el juego
-        startGame();
-
-        //mezclar
-
-
-    }
-
-    public void toDealPlayers()
-    {
-        //3 cartas por jugador
-        Debug.Log("Repartir el mazo a los jugadores");
-        for (int i = 0; i < config.numberPlayers; i++)
+        if (checkWinner())
         {
-            if (i > 0)
-            {
-                playerBacks[i - 1].SetActive(true);
-            }
-            ;
-            deckGO.GetComponent<DeckScript>().toDeal(players[i]);
-
+            playON = false;
         }
-
+        if (playON)
+        {
+            //Le damos el turno al primer jugador
+            if (players.transform.GetChild(currentPlayer).GetComponent<BasePlayer>().isFinish())
+            {
+                nextPlayer();
+                nextPlay();
+            }
+        }
     }
+
+
 
 
     public void startGame()
     {
         Debug.Log("Comienza el juego");
         currentPlayer = 0;
-        nextTurn();
+
+        nextPlay();
+        playON = true;
     }
 
-    public void nextTurn()
+    public void nextPlay()
     {
-        if (currentPlayer == config.numberPlayers - 1)
+        Debug.Log("Jugada del jugador: "+ players.transform.GetChild(currentPlayer).name);
+        players.transform.GetChild(currentPlayer).GetComponent<BasePlayer>().gameTurn();
+
+
+        
+
+
+    }
+
+    public void nextPlayer()
+    {
+        currentPlayer++;
+        if (currentPlayer >= players.transform.childCount)
         {
             currentPlayer = 0;
-            players[0].GetComponent<playerScript>().activateCards(true);
-
-            Debug.Log("Turno del jugador: " + (currentPlayer + 1));
-            players[currentPlayer].GetComponent<playerScript>().play();
         }
-        else
-        {
-            currentPlayer++;
-            players[0].GetComponent<playerScript>().activateCards(false);
-
-            Debug.Log("Turno del jugador: " + (currentPlayer + 1));
-            players[currentPlayer].GetComponent<botScript>().play();
-
-
-        }
-
+        Debug.Log("Siguiente jugador: " + players.transform.GetChild(currentPlayer).name);
 
     }
 
+    public bool checkWinner()
+    {
+        bool win = false;
+        //Debug.Log("Comprobamos si hay ganador");
+
+        List<Transform> noLosers = new List<Transform>();
+        foreach (Transform player in players.transform)
+        {
+            if (player.GetComponent<BasePlayer>().isAlive())
+            {
+                noLosers.Add(player);
+            }
+        }
+
+        if (noLosers.Count == 1)
+        {
+            win = true;
+            panelWin.SetActive(true);
+            panelWinText.text = "Ganador " + noLosers[0].transform.name;
+            Debug.Log("El ganador es el jugador: " + noLosers[0].transform.name);
+
+        }
+
+        return win;
+    }
 }

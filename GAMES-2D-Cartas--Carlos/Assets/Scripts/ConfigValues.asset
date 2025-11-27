@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630e9528b5660474cbbafaca36d2c9f6, type: 3}
   m_Name: ConfigValues
   m_EditorClassIdentifier: Assembly-CSharp::ConfigValues
-  numberPlayers: 2
+  numberPlayers: 4
+  maxPlayers: 0
+  initialCards: 3

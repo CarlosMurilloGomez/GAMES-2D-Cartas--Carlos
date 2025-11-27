@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
@@ -10,12 +11,16 @@ public enum CardType
     pass,
     future,
     noAction
+        //tornado (barajar las cartas)
+        //ladron (robar desde abajo)
 }
 public class CardScript : MonoBehaviour
 {
     public CardType cardType;
 
     public GameObject tableGO;
+
+    private Transform parentPlayer;
     void Start()
     {
         tableGO = GameObject.FindGameObjectWithTag("Table");
@@ -52,14 +57,16 @@ public class CardScript : MonoBehaviour
 
     public void moveCard(GameObject destino)
     {
-        StartCoroutine("moveCardCoroutine", destino);
+        parentPlayer = transform.parent;
+        transform.SetParent(destino.transform, false);
+
+        StartCoroutine(moveCardCoroutine(destino));
     }
     IEnumerator moveCardCoroutine(GameObject destino)
-    {        
-        transform.SetParent(destino.transform);
+    {
 
         float timeElipsed = 0f;
-        float durMove = 10f;
+        float durMove = 1f;
         while (timeElipsed < durMove)
         {
             float factorT = timeElipsed / durMove;
@@ -68,6 +75,11 @@ public class CardScript : MonoBehaviour
 
             yield return null;
         }
+        transform.position = destino.transform.position;
+
+        
+
     }
+
 
 }

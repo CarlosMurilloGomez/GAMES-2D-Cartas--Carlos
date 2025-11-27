@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class botScript : MonoBehaviour
+public class botScript : BasePlayer
 {
-    public GameObject gameManager;
+    public GameObject back;
     private GameObject tableGO;
 
     void Start()
@@ -12,17 +12,32 @@ public class botScript : MonoBehaviour
 
     void Update()
     {
-        
+        if (transform.childCount == 0 || !isAlive())
+        {
+            back.SetActive(false);
+        }
+        else
+        {
+            back.SetActive(true);
+        }
     }
 
-    public void play()
+    public override void gameTurn()
     {
+        if (isAlive())
+        {
+            Debug.Log("Turno del bot: " + this.name);
+            startTurn();
+
+            int num = Random.Range(0, transform.childCount);
+            GameObject card = transform.GetChild(num).gameObject;
+            card.GetComponent<CardScript>().moveCard(tableGO);
+
+
+            drawCard();
+        }
         
-        int num = Random.Range(0, transform.childCount);
-        GameObject card = transform.GetChild(num).gameObject;
-        card.GetComponent<CardScript>().moveCard(tableGO);
 
 
-        gameManager.GetComponent<GameManager>().nextTurn();
     }
 }
