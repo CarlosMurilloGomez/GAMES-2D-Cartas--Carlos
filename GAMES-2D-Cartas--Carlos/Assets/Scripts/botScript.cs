@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class botScript : BasePlayer
 {
@@ -29,15 +31,35 @@ public class botScript : BasePlayer
             Debug.Log("Turno del bot: " + this.name);
             startTurn();
 
-            int num = Random.Range(0, transform.childCount);
-            GameObject card = transform.GetChild(num).gameObject;
-            card.GetComponent<CardScript>().moveCard(tableGO);
+            StartCoroutine(turnTime());
 
-
-            drawCard();
         }
         
 
-
     }
+    IEnumerator turnTime()
+    {
+        yield return new WaitForSeconds(2.0f);
+
+        int num = Random.Range(0, transform.childCount);
+        GameObject card = transform.GetChild(num).gameObject;
+        
+        while (card.GetComponent<CardScript>().cardType == CardType.antidote)
+        {
+            num = Random.Range(0, transform.childCount);
+            card = transform.GetChild(num).gameObject;
+        }
+
+        card.GetComponent<CardScript>().moveCard(tableGO);
+
+        yield return new WaitForSeconds(1f);
+
+        drawCard();
+
+        yield return new WaitForSeconds(2f);
+
+        endTurn();
+    }
+
+
 }

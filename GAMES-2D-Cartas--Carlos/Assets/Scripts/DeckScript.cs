@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -10,28 +12,53 @@ public class DeckScript : MonoBehaviour
 
     public GameObject players;
     public GameObject backs;
+
+    public GameObject poisonAnim;
+
+    public GameObject textoStart;
+    public GameObject shuffleEffect;
+
     void Start()
+    {
+
+        StartCoroutine(waitDeck());
+
+
+    }
+
+    public void Start2()
     {
         //Generar el mazo inicial
         generateDeckIni();
 
         //repartir 
-        toDealPlayers();
+        StartCoroutine(toDealPlayers());
 
-        //desactivar las cartas al jugador hasta que le toque su turno
-        players.transform.GetChild(0).GetComponent<playerScript>().activateCards(false);
 
+    }
+
+    public void Start3()
+    {
         //añadir los poison
         addPoison();
 
         //mezclar
         shuffleDeck();
+        
+
+        textoStart.GetComponent<Animator>().SetTrigger("start");
+        StartCoroutine(Destruir(textoStart, 5f));
 
         //comenzar el juego
         GameManager.Instance.startGame();
-
     }
 
+    IEnumerator Destruir(GameObject objeto, float segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+
+        Destroy(objeto);
+    }
     void Update()
     {
         
@@ -70,7 +97,7 @@ public class DeckScript : MonoBehaviour
 
     }
 
-    public void toDealPlayers()
+    IEnumerator toDealPlayers()
     {
         //3 cartas por jugador
         Debug.Log("Repartir el mazo a los jugadores");
@@ -78,9 +105,12 @@ public class DeckScript : MonoBehaviour
         int i = 0;
         foreach (Transform player in players.transform)
         {
-            if (i< config.numberPlayers)
+            if (i < config.numberPlayers)
             {
-                toDeal(player.gameObject);
+                StartCoroutine(toDeal(player.gameObject));
+
+                yield return new WaitForSeconds(config.initialCards);
+
                 if (player.transform.GetComponent<BasePlayer>() is botScript)
                 {
                     backs.transform.GetChild(i).gameObject.SetActive(true);
@@ -94,10 +124,15 @@ public class DeckScript : MonoBehaviour
             i++;
         }
 
+        //desactivar las cartas al jugador hasta que le toque su turno
+        players.transform.GetChild(0).GetComponent<playerScript>().activateCards(false);
+
+        StartCoroutine(waitPoison());
+
     }
 
 
-    public void toDeal(GameObject player)
+    IEnumerator toDeal(GameObject player)
     {
         Debug.Log("repartimos cartas al jugador: " + player.name);
         //Se reparten X cartas por jugador
@@ -105,8 +140,20 @@ public class DeckScript : MonoBehaviour
         {
             int num = Random.Range(0, transform.childCount);
             GameObject card = transform.GetChild(num).gameObject;
-            card.transform.SetParent(player.transform);
-            card.transform.localPosition = new Vector2(0, 0);
+
+            if (player.GetComponent<BasePlayer>() is playerScript)
+            {
+                card.GetComponent<CardScript>().drawCardPlayer(player);
+            }
+            else
+            {                
+                card.GetComponent<CardScript>().ponerBack();
+                card.GetComponent<CardScript>().moveCard(player);
+            }
+
+            yield return new WaitForSeconds(0.5f);
+            card.GetComponent<CardScript>().ponerImagen();
+
         }
 
     }
@@ -114,7 +161,7 @@ public class DeckScript : MonoBehaviour
     public void addPoison()
     {
         Debug.Log("Añadir las cartas de veneno");
-        generateCards(prefabs.poison, config.numberPlayers);
+        generateCards(prefabs.poison, (config.numberPlayers-1)*2);
 
     }
 
@@ -147,12 +194,30 @@ public class DeckScript : MonoBehaviour
             Destroy(shuffled[i].gameObject);
         }
 
+        backs.transform.GetChild(0).GetComponent<Animator>().SetTrigger("shuffle");
+        shuffleEffect.GetComponent<Animator>().SetTrigger("shuffle");
+
     }
 
-public GameObject getCard()
+    public GameObject getCard()
     {
         //int num = Random.Range(0, transform.childCount);
         GameObject card = transform.GetChild(0).gameObject;
         return card;
+    }
+
+    IEnumerator waitDeck()
+    {
+        yield return new WaitForSeconds(3.0f);
+
+        Start2();
+    }
+
+    IEnumerator waitPoison()
+    {
+        poisonAnim.GetComponent<Animator>().enabled = true;
+        yield return new WaitForSeconds(2.0f);
+
+        Start3();
     }
 }

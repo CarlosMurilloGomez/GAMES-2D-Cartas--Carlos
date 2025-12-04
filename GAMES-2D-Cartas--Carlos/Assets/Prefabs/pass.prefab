@@ -146,4 +146,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardScript
   cardType: 2
-  tableGO: {fileID: 0}
+  imagen: {fileID: 21300000, guid: 13f52a6183ca0d24c8b472f338d2887c, type: 3}
+  imagenBack: {fileID: 21300000, guid: 0e34524f1c14f2544b0e51429a2a88ea, type: 3}

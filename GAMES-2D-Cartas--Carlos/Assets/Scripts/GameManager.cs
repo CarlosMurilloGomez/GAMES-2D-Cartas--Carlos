@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject players;
 
-    private int currentPlayer;
+    public int currentPlayer;
 
     private bool playON;
 
@@ -64,10 +64,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Jugada del jugador: "+ players.transform.GetChild(currentPlayer).name);
         players.transform.GetChild(currentPlayer).GetComponent<BasePlayer>().gameTurn();
-
-
-        
-
 
     }
 

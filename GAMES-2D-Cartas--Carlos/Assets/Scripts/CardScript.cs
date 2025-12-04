@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,18 +20,29 @@ public class CardScript : MonoBehaviour
 {
     public CardType cardType;
 
-    public GameObject tableGO;
+    private GameObject tableGO;
 
-    private Transform parentPlayer;
+    public Sprite imagen;
+    public Sprite imagenBack;
+
     void Start()
     {
         tableGO = GameObject.FindGameObjectWithTag("Table");
-        //tableGO = GameObject.Find("Table");
     }
 
     void Update()
     {
         
+    }
+
+    public void ponerImagen()
+    {
+        GetComponent<Image>().sprite = imagen;
+    }
+
+    public void ponerBack()
+    {
+        GetComponent<Image>().sprite = imagenBack;
     }
 
     public void antidoteAction()
@@ -57,16 +70,18 @@ public class CardScript : MonoBehaviour
 
     public void moveCard(GameObject destino)
     {
-        parentPlayer = transform.parent;
-        transform.SetParent(destino.transform, false);
+        transform.SetParent(destino.transform);
 
         StartCoroutine(moveCardCoroutine(destino));
     }
+
+
     IEnumerator moveCardCoroutine(GameObject destino)
     {
 
         float timeElipsed = 0f;
         float durMove = 1f;
+
         while (timeElipsed < durMove)
         {
             float factorT = timeElipsed / durMove;
@@ -77,7 +92,33 @@ public class CardScript : MonoBehaviour
         }
         transform.position = destino.transform.position;
 
-        
+
+    }
+
+    public void drawCardPlayer(GameObject player)
+    {
+        transform.SetParent(GameObject.Find("Canvas").transform);
+
+        StartCoroutine(drawCardPlayerCoroutine(player));
+
+
+    }
+
+    IEnumerator drawCardPlayerCoroutine(GameObject destino)
+    {
+
+        float timeElipsed = 0f;
+        float durMove = 1f;
+
+        while (timeElipsed < durMove)
+        {
+            float factorT = timeElipsed / durMove;
+            transform.position = Vector3.Lerp(transform.position, destino.transform.position, factorT);
+            timeElipsed += Time.deltaTime;
+
+            yield return null;
+        }
+        transform.SetParent(destino.transform);
 
     }
 

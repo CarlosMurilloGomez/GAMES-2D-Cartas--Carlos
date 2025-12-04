@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public abstract class BasePlayer : MonoBehaviour
 {
     public GameObject deckGO;
+    private GameObject tableGO;
     private bool finish;
 
     private bool alive;
@@ -14,6 +16,7 @@ public abstract class BasePlayer : MonoBehaviour
     }
     void Start()
     {
+        tableGO = GameObject.FindGameObjectWithTag("Table");
         if (deckGO == null)
         {
             deckGO = GameObject.Find("Deck");
@@ -53,16 +56,48 @@ public abstract class BasePlayer : MonoBehaviour
 
         //Implementar robar carta
         GameObject card = deckGO.GetComponent<DeckScript>().getCard();
-        card.GetComponent<CardScript>().moveCard(gameObject);
-        
+
+
+        if (this is playerScript)
+        {
+            card.GetComponent<CardScript>().drawCardPlayer(gameObject);
+
+        }
+        else
+        {
+            card.GetComponent<CardScript>().moveCard(gameObject);
+
+        }
 
         if (card.GetComponent<CardScript>().cardType == CardType.poison)
         {
-            alive = false;
-            Debug.Log("Pierde el jugador: " + this.name);
+            GameObject antidoto = null;
+            //mirar si hay antidotos
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                if (transform.GetChild(i).GetComponent<CardScript>().cardType == CardType.antidote){
+                    antidoto = transform.GetChild(i).gameObject;
+                }
+            }
+            //si hay, lanzarlo
+            if ( antidoto != null)
+            {
+                card.GetComponent<Animator>().SetTrigger("win");
+                card.GetComponent<CardScript>().moveCard(tableGO);
+            }
+            else
+            {
+                //si no hay morirse
+                alive = false;
+                Debug.Log("Pierde el jugador: " + this.name);
+                card.GetComponent<Animator>().SetTrigger("lose");
+            }
+                
+
         }
 
-        endTurn();
-        Debug.Log("Termina el tueno del jugador: " + this.name);
+  
+        
     }
+
 }
