@@ -7,7 +7,7 @@ public class playerScript : BasePlayer
     public GameObject deckBack;
     void Start()
     {
-        
+        tableGO = GameObject.FindGameObjectWithTag("Table");
     }
 
     void Update()
@@ -27,10 +27,12 @@ public class playerScript : BasePlayer
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<Button>().enabled = enabled;
-            deckBack.GetComponent<Button>().enabled = enabled;
         }
- 
+        deckBack.GetComponent<Button>().enabled = enabled;
+
     }
+
+
 
     public override void gameTurn()
     {

@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class DeckScript : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class DeckScript : MonoBehaviour
     public GameObject textoStart;
     public GameObject shuffleEffect;
 
+    public GameObject panelFuturo;
+    public GameObject[] futuros;
     void Start()
     {
 
@@ -28,6 +31,8 @@ public class DeckScript : MonoBehaviour
 
     public void Start2()
     {
+
+
         //Generar el mazo inicial
         generateDeckIni();
 
@@ -36,6 +41,7 @@ public class DeckScript : MonoBehaviour
 
 
     }
+
 
     public void Start3()
     {
@@ -94,6 +100,8 @@ public class DeckScript : MonoBehaviour
         generateCards(prefabs.koala, config.numberPlayers + 1);
         generateCards(prefabs.cat, config.numberPlayers + 1);
         generateCards(prefabs.turtle, config.numberPlayers + 1);
+        generateCards(prefabs.tornado, config.numberPlayers);
+        generateCards(prefabs.thieve, config.numberPlayers);
 
     }
 
@@ -152,7 +160,7 @@ public class DeckScript : MonoBehaviour
             }
 
             yield return new WaitForSeconds(0.5f);
-            card.GetComponent<CardScript>().ponerImagen();
+            //card.GetComponent<CardScript>().ponerImagen();
 
         }
 
@@ -199,10 +207,17 @@ public class DeckScript : MonoBehaviour
 
     }
 
-    public GameObject getCard()
+    public GameObject getCard(bool desdeArriba)
     {
-        //int num = Random.Range(0, transform.childCount);
-        GameObject card = transform.GetChild(0).gameObject;
+        GameObject card = null;
+        if (desdeArriba)
+        {
+            card = transform.GetChild(0).gameObject;
+        }
+        else
+        {
+            card = transform.GetChild(transform.childCount-1).gameObject;
+        }
         return card;
     }
 
@@ -219,5 +234,18 @@ public class DeckScript : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         Start3();
+    }
+
+
+    public void mostrarFuturo()
+    {
+        Sprite futuro1 = transform.GetChild(0).gameObject.GetComponent<Image>().sprite;
+        Sprite futuro2 = transform.GetChild(1).gameObject.GetComponent<Image>().sprite;
+        Sprite futuro3 = transform.GetChild(2).gameObject.GetComponent<Image>().sprite;
+        panelFuturo.SetActive(true);
+
+        futuros[0].GetComponent<Image>().sprite = futuro1;
+        futuros[1].GetComponent<Image>().sprite = futuro2;
+        futuros[2].GetComponent<Image>().sprite = futuro3;
     }
 }

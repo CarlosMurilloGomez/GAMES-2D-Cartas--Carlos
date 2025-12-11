@@ -20,3 +20,5 @@ MonoBehaviour:
   koala: {fileID: 1010293941936784768, guid: bcd190b985895234d9b2df9f9597f14c, type: 3}
   turtle: {fileID: 1010293941936784768, guid: ece9d04d721b34b4b8f70b28edb06e86, type: 3}
   cat: {fileID: 1010293941936784768, guid: 20882aaa7e042ae4bac4074b8f630f12, type: 3}
+  tornado: {fileID: 1010293941936784768, guid: f1fa8c77bcc4e2a488b6709dbf98a68d, type: 3}
+  thieve: {fileID: 1010293941936784768, guid: c6b0b347a2d887646b91b38babc7f2a6, type: 3}

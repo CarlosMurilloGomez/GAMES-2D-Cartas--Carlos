@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\playerScript.cs" />
     <Compile Include="Assets\Scripts\CardPrefabs.cs" />
     <Compile Include="Assets\Scripts\ConfigValues.cs" />
+    <Compile Include="Assets\Scripts\menuManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\botScript.cs" />
     <Compile Include="Assets\Scripts\BasePlayer.cs" />

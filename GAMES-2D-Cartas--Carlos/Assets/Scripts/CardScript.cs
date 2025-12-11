@@ -12,6 +12,8 @@ public enum CardType
     antidote,
     pass,
     future,
+    thieve,
+    tornado,
     noAction
         //tornado (barajar las cartas)
         //ladron (robar desde abajo)
@@ -45,6 +47,11 @@ public class CardScript : MonoBehaviour
         GetComponent<Image>().sprite = imagenBack;
     }
 
+    public void destruir()
+    {
+        Destroy(gameObject);
+    }
+
     public void antidoteAction()
     {
         Debug.Log("Accion: antidote");
@@ -53,15 +60,35 @@ public class CardScript : MonoBehaviour
     }
     public void passAction()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerScript>().activateCards(false);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerScript>().endTurn();
         Debug.Log("Accion: pass");
         moveCard(tableGO);
 
     }
     public void futureAction()
     {
+        GameObject.Find("Deck").GetComponent<DeckScript>().mostrarFuturo();
         Debug.Log("Accion: future");
         moveCard(tableGO);
     }
+
+    public void tornadoAction()
+    {
+        GameObject.Find("Deck").GetComponent<DeckScript>().shuffleDeck();
+        Debug.Log("Accion: tornado");
+        moveCard(tableGO);
+    }
+
+    public void thieveAction()
+    {
+        Debug.Log("Accion: thieve");
+        moveCard(tableGO);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerScript>().activateCards(false);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerScript>().drawCard(false);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerScript>().endTurn();
+    }
+
     public void noAction()
     {
         Debug.Log("Accion: noAction");
@@ -91,13 +118,13 @@ public class CardScript : MonoBehaviour
             yield return null;
         }
         transform.position = destino.transform.position;
-
+        ponerImagen();
 
     }
 
     public void drawCardPlayer(GameObject player)
     {
-        transform.SetParent(GameObject.Find("Canvas").transform);
+        //transform.SetParent(GameObject.Find("Canvas").transform);
 
         StartCoroutine(drawCardPlayerCoroutine(player));
 
@@ -118,7 +145,15 @@ public class CardScript : MonoBehaviour
 
             yield return null;
         }
-        transform.SetParent(destino.transform);
+        if (cardType == CardType.poison)
+        {
+            transform.SetParent(GameObject.Find("Poisons").transform);
+        }
+        else 
+        { 
+            transform.SetParent(destino.transform);
+        }
+        
 
     }
 

@@ -5,10 +5,11 @@ using static UnityEngine.Rendering.DebugUI;
 public abstract class BasePlayer : MonoBehaviour
 {
     public GameObject deckGO;
-    private GameObject tableGO;
+    public GameObject tableGO;
     private bool finish;
 
     private bool alive;
+
     private void Awake()
     {
         alive = true;
@@ -17,10 +18,10 @@ public abstract class BasePlayer : MonoBehaviour
     void Start()
     {
         tableGO = GameObject.FindGameObjectWithTag("Table");
-        if (deckGO == null)
-        {
-            deckGO = GameObject.Find("Deck");
-        }
+        //if (deckGO == null)
+        //{
+        //    deckGO = GameObject.Find("Deck");
+        //}
     }
 
     void Update()
@@ -50,12 +51,12 @@ public abstract class BasePlayer : MonoBehaviour
 
     public abstract void gameTurn();
 
-    public void drawCard()
+    public void drawCard(bool desdeArriba)
     {
         Debug.Log("Robamos carta para: " + this.name);
 
         //Implementar robar carta
-        GameObject card = deckGO.GetComponent<DeckScript>().getCard();
+        GameObject card = deckGO.GetComponent<DeckScript>().getCard(desdeArriba);
 
 
         if (this is playerScript)
@@ -65,12 +66,18 @@ public abstract class BasePlayer : MonoBehaviour
         }
         else
         {
+            if (card.GetComponent<CardScript>().cardType != CardType.poison)
+            {
+                card.GetComponent<CardScript>().ponerBack();
+            }
             card.GetComponent<CardScript>().moveCard(gameObject);
 
         }
 
         if (card.GetComponent<CardScript>().cardType == CardType.poison)
         {
+            card.transform.SetParent(GameObject.Find("Poisons").transform);
+
             GameObject antidoto = null;
             //mirar si hay antidotos
             for (int i = 0; i < transform.childCount; i++)
@@ -82,8 +89,9 @@ public abstract class BasePlayer : MonoBehaviour
             //si hay, lanzarlo
             if ( antidoto != null)
             {
+
                 card.GetComponent<Animator>().SetTrigger("win");
-                card.GetComponent<CardScript>().moveCard(tableGO);
+                antidoto.GetComponent<CardScript>().moveCard(tableGO);
             }
             else
             {
@@ -92,7 +100,7 @@ public abstract class BasePlayer : MonoBehaviour
                 Debug.Log("Pierde el jugador: " + this.name);
                 card.GetComponent<Animator>().SetTrigger("lose");
             }
-                
+
 
         }
 

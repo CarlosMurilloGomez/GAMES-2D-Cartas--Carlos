@@ -11,4 +11,6 @@ public class CardPrefabs : ScriptableObject
     public GameObject koala;
     public GameObject turtle;
     public GameObject cat;
+    public GameObject tornado;
+    public GameObject thieve;
 }

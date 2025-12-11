@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class GameManager : MonoBehaviour
     public GameObject panelWin;
     public TextMeshProUGUI panelWinText;
 
+    public GameObject panelFuture;
+    public TextMeshProUGUI[] nombresText;
+    private List<string> listaNombres;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -25,11 +30,30 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
+
     }
     void Start()
     {
+        generateNames();
+
         playON = false;
     }
+
+    public void generateNames()
+    {
+        listaNombres = new List<string>()
+        {
+            "Carlos", "Nicolas", "Pepe", "Juan", "Pedro", "Antonio", "Sergio"
+        };
+        for (int i = 0; i < config.numberPlayers - 1; i++)
+        {
+            int nombreRandom = Random.Range(0, listaNombres.Count - 1);
+            nombresText[i].text = listaNombres[nombreRandom];
+            listaNombres.RemoveAt(i);
+        }
+    }
+
+
 
     void Update()
     {
@@ -102,5 +126,21 @@ public class GameManager : MonoBehaviour
         }
 
         return win;
+    }
+
+
+    public void cerrarFuturo()
+    {
+        panelFuture.SetActive(false);
+    }
+
+    public void revancha()
+    {
+        SceneManager.LoadScene("cardGame");
+    }
+
+    public void salir()
+    {
+        SceneManager.LoadScene("mainMenu");
     }
 }
