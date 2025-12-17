@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI[] nombresText;
     private List<string> listaNombres;
 
+    public GameObject panelPausa;
+
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -41,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     public void generateNames()
     {
+        nombresText[0].text = config.playerName;
         listaNombres = new List<string>()
         {
             "Carlos", "Nicolas", "Pepe", "Juan", "Pedro", "Antonio", "Sergio"
@@ -48,7 +52,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < config.numberPlayers - 1; i++)
         {
             int nombreRandom = Random.Range(0, listaNombres.Count - 1);
-            nombresText[i].text = listaNombres[nombreRandom];
+            nombresText[i+1].text = listaNombres[nombreRandom];
             listaNombres.RemoveAt(i);
         }
     }
@@ -69,7 +73,15 @@ public class GameManager : MonoBehaviour
                 nextPlayer();
                 nextPlay();
             }
+
+            //Pulsar esc para abrir el menu de pausa
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                panelPausa.gameObject.SetActive(panelPausa.activeSelf!);
+            }
         }
+
+
     }
 
 
@@ -108,13 +120,18 @@ public class GameManager : MonoBehaviour
         //Debug.Log("Comprobamos si hay ganador");
 
         List<Transform> noLosers = new List<Transform>();
-        foreach (Transform player in players.transform)
+        for (int i = 0; i < players.transform.childCount; i++)
         {
-            if (player.GetComponent<BasePlayer>().isAlive())
+            if (players.transform.GetChild(i).GetComponent<BasePlayer>().isAlive())
             {
-                noLosers.Add(player);
+                noLosers.Add(players.transform.GetChild(i));
+            }
+            else
+            {
+                nombresText[i].color = Color.red;
             }
         }
+
 
         if (noLosers.Count == 1)
         {

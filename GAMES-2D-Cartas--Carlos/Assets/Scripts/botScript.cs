@@ -65,7 +65,7 @@ public class botScript : BasePlayer
             }
         }
 
-
+        card.GetComponent<AudioSource>().Play();
         card.GetComponent<CardScript>().moveCard(tableGO);
 
 

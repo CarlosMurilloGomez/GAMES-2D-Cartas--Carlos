@@ -204,6 +204,7 @@ public class DeckScript : MonoBehaviour
 
         backs.transform.GetChild(0).GetComponent<Animator>().SetTrigger("shuffle");
         shuffleEffect.GetComponent<Animator>().SetTrigger("shuffle");
+        GetComponent<AudioSource>().Play();
 
     }
 

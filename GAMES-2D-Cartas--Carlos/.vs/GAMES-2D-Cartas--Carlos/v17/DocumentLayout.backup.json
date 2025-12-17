@@ -1,33 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\",
+  "WorkspaceRootPath": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|c:\\unitygithub\\games-2d-cartas--carlos\\games-2d-cartas--carlos\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|c:\\users\\srgmu\\desktop\\carlos\\unitygithub\\games-2d-cartas--carlos\\games-2d-cartas--carlos\\assets\\scripts\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|c:\\unitygithub\\games-2d-cartas--carlos\\games-2d-cartas--carlos\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|c:\\users\\srgmu\\desktop\\carlos\\unitygithub\\games-2d-cartas--carlos\\games-2d-cartas--carlos\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\baseplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\baseplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\botscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\botscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\botscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\deckscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\deckscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\deckscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\cardscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\baseplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\baseplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\cardscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cardscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -43,61 +47,74 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "tutorialManager.cs",
+              "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\tutorialManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\tutorialManager.cs",
+              "ToolTip": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\tutorialManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\tutorialManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T19:00:42.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "menuManager.cs",
-              "DocumentMoniker": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\menuManager.cs",
+              "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\menuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\menuManager.cs",
-              "ToolTip": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\menuManager.cs",
+              "ToolTip": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\menuManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\menuManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwCAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T19:09:11.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "BasePlayer.cs",
-              "DocumentMoniker": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\BasePlayer.cs",
+              "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\BasePlayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BasePlayer.cs",
-              "ToolTip": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\BasePlayer.cs",
+              "ToolTip": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\BasePlayer.cs",
               "RelativeToolTip": "Assets\\Scripts\\BasePlayer.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAA8wCQAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGkAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T15:27:14.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "botScript.cs",
-              "DocumentMoniker": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\botScript.cs",
+              "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\botScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\botScript.cs",
-              "ToolTip": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\botScript.cs",
+              "ToolTip": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\botScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\botScript.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAmwB8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T19:10:27.492Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "playerScript.cs",
-              "DocumentMoniker": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\playerScript.cs",
+              "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\playerScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\playerScript.cs",
-              "ToolTip": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\playerScript.cs",
+              "ToolTip": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\playerScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\playerScript.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAmwCkAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T18:04:48.61Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "DeckScript.cs",
-              "DocumentMoniker": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\DeckScript.cs",
+              "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\DeckScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DeckScript.cs",
-              "ToolTip": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\DeckScript.cs",
+              "ToolTip": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\DeckScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\DeckScript.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAAAM4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T16:35:07.459Z"
             },
@@ -105,24 +122,24 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAuwKEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T16:23:56.285Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CardScript.cs",
-              "DocumentMoniker": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\CardScript.cs",
+              "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\CardScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CardScript.cs",
-              "ToolTip": "C:\\UnityGithub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\CardScript.cs",
+              "ToolTip": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\CardScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\CardScript.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAwEYAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAA5wDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T15:46:45.538Z"
             }

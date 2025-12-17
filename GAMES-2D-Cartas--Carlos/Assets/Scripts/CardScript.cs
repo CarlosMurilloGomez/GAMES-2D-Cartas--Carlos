@@ -27,6 +27,7 @@ public class CardScript : MonoBehaviour
     public Sprite imagen;
     public Sprite imagenBack;
 
+
     void Start()
     {
         tableGO = GameObject.FindGameObjectWithTag("Table");
@@ -47,10 +48,12 @@ public class CardScript : MonoBehaviour
         GetComponent<Image>().sprite = imagenBack;
     }
 
+
     public void destruir()
     {
         Destroy(gameObject);
     }
+
 
     public void antidoteAction()
     {

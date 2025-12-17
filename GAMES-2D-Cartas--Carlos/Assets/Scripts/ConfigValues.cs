@@ -8,5 +8,7 @@ public class ConfigValues : ScriptableObject
     public int maxPlayers;
 
     public int initialCards;
+
+    public string playerName;
     
 }

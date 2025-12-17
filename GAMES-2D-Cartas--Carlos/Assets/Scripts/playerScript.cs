@@ -34,6 +34,7 @@ public class playerScript : BasePlayer
 
 
 
+
     public override void gameTurn()
     {
         if (isAlive())
