@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\botscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\botscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|c:\\users\\srgmu\\desktop\\carlos\\unitygithub\\games-2d-cartas--carlos\\games-2d-cartas--carlos\\assets\\scripts\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,12 +15,8 @@
       "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|c:\\users\\srgmu\\desktop\\carlos\\unitygithub\\games-2d-cartas--carlos\\games-2d-cartas--carlos\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\botscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\botscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EC13495-3804-CA25-FE39-DAEDB09595B7}|Assembly-CSharp.csproj|C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\assets\\scripts\\deckscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "tutorialManager.cs",
               "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\tutorialManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\tutorialManager.cs",
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "menuManager.cs",
               "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\menuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\menuManager.cs",
@@ -67,8 +67,7 @@
               "RelativeToolTip": "Assets\\Scripts\\menuManager.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAzwCAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T19:09:11.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T19:09:11.699Z"
             },
             {
               "$type": "Document",
@@ -84,15 +83,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "botScript.cs",
               "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\botScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\botScript.cs",
               "ToolTip": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\botScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\botScript.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEQAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T19:10:27.492Z"
+              "WhenOpened": "2025-11-20T19:10:27.492Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -120,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\srgmu\\Desktop\\CARLOS\\UnityGitHub\\GAMES-2D-Cartas--Carlos\\GAMES-2D-Cartas--Carlos\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -128,8 +128,7 @@
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
               "ViewState": "AgIAAJIAAAAAAAAAAAAuwKEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T16:23:56.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T16:23:56.285Z"
             },
             {
               "$type": "Document",

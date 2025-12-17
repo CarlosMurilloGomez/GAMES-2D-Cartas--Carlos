@@ -42,56 +42,61 @@ public class botScript : BasePlayer
         back.GetComponent<Image>().color = Color.yellow;
         yield return new WaitForSeconds(2.0f);
 
-        int num = Random.Range(0, transform.childCount);
-        GameObject card = transform.GetChild(num).gameObject;
+        if (transform.childCount > 0) { //Si tiene cartas en la mano, juega una aleatoria
+            int num = Random.Range(0, transform.childCount);
+            GameObject card = transform.GetChild(num).gameObject;
 
-        //Se comprueba que tenga mas cosas a parte de antidotos
-        bool onlyAntidote = true;
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).GetComponent<CardScript>().cardType != CardType.antidote)
+            //Se comprueba que tenga mas cosas a parte de antidotos
+            bool onlyAntidote = true;
+            for (int i = 0; i < transform.childCount; i++)
             {
-                onlyAntidote = false;
+                if (transform.GetChild(i).GetComponent<CardScript>().cardType != CardType.antidote)
+                {
+                    onlyAntidote = false;
+                }
+            }
+
+            //Si tiene mas cartas a parte de antidotos, busca una carta para jugar que no lo sea
+            if (!onlyAntidote)
+            {
+                while (card.GetComponent<CardScript>().cardType == CardType.antidote)
+                {
+                    num = Random.Range(0, transform.childCount);
+                    card = transform.GetChild(num).gameObject;
+                }
+            }
+
+            card.GetComponent<AudioSource>().Play();
+            card.GetComponent<CardScript>().moveCard(tableGO);
+
+
+
+            if (card.GetComponent<CardScript>().cardType != CardType.pass) // Si no es una carta de pasar, hay que robar
+            {
+                if (card.GetComponent<CardScript>().cardType == CardType.tornado) // Si se juega la carta de tornado, se baraja el mazo
+                {
+                    deckGO.GetComponent<DeckScript>().shuffleDeck();
+                    yield return new WaitForSeconds(3f);
+
+                }
+                else
+                {
+                    yield return new WaitForSeconds(1f);
+                }
+
+                bool desdeArriba = true;
+                if (card.GetComponent<CardScript>().cardType == CardType.thieve) // Si juega una carta de ladron, roba desde abajo
+                {
+                    desdeArriba = false;
+                }
+
+                drawCard(desdeArriba);
             }
         }
-
-        //Si tiene mas cartas a parte de antidotos, busca una carta para jugar que no lo sea
-        if (!onlyAntidote)
+        else //Si no tiene cartas para echar, roba directamente
         {
-            while (card.GetComponent<CardScript>().cardType == CardType.antidote)
-            {
-                num = Random.Range(0, transform.childCount);
-                card = transform.GetChild(num).gameObject;
-            }
+            drawCard(true);
         }
-
-        card.GetComponent<AudioSource>().Play();
-        card.GetComponent<CardScript>().moveCard(tableGO);
-
-
-
-        if (card.GetComponent<CardScript>().cardType != CardType.pass) // Si no es una carta de pasar, hay que robar
-        {
-            if (card.GetComponent<CardScript>().cardType == CardType.tornado) // Si se juega la carta de tornado, se baraja el mazo
-            {
-                deckGO.GetComponent<DeckScript>().shuffleDeck();
-                yield return new WaitForSeconds(3f);
-
-            }
-            else
-            {
-                yield return new WaitForSeconds(1f);
-            }
-
-            bool desdeArriba = true;
-            if (card.GetComponent<CardScript>().cardType == CardType.thieve) // Si juega una carta de ladron, roba desde abajo
-            {
-                desdeArriba = false;
-            }
-
-            drawCard(desdeArriba);
-        }
-
 
         yield return new WaitForSeconds(2f);
 
