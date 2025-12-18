@@ -1,0 +1,10 @@
+# ninja log v5
+25	1911	7877756691428851	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	b9853d3187c6c39c
+53	1922	7877756691428851	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	709eb1bc4b45cfd5
+67	1960	7877756691951424	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	3295711d4089047f
+6	1980	7877756692093062	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6a07c909a869e892
+0	2049	7877756692950073	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	1ccf958058b3352d
+44	2324	7877756695722569	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	1e5e0ec29756cf53
+77	2364	7877756696188683	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	137941532cbb2426
+15	2443	7877756696999342	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	f204e13907c90240
+2443	2640	7877756699037601	C:/UnityGithub/GAMES-2D-Cartas--Carlos/GAMES-2D-Cartas--Carlos/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1t2x3926/obj/arm64-v8a/libgame.so	7c71fb5c3bdf0dc4

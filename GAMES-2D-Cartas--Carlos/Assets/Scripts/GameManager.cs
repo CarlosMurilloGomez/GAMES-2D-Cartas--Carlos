@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     public void generateNames()
     {
         nombresText[0].text = config.playerName;
+        players.transform.GetChild(0).name = config.playerName;
         listaNombres = new List<string>()
         {
             "Carlos", "Nicolas", "Pepe", "Juan", "Pedro", "Antonio", "Sergio"
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         {
             int nombreRandom = Random.Range(0, listaNombres.Count - 1);
             nombresText[i+1].text = listaNombres[nombreRandom];
+            players.transform.GetChild(i+1).name = listaNombres[nombreRandom];
             listaNombres.RemoveAt(i);
         }
     }

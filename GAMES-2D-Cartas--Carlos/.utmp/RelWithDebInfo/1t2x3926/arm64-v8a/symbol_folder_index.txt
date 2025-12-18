@@ -1,0 +1,1 @@
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\1t2x3926\obj\arm64-v8a

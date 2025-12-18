@@ -1,0 +1,17 @@
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\GAToUnityCallbacks.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroEnd.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroHeaderBegin.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroSourceBegin.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAApplication.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAConfiguration.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGADebug.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAEvents.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAInput.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboard.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboardCallbacks.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGATypes.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAVersion.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGACallbacks.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAConfigurationCallbacks.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAKeyEventCallbacks.h
+C:\UnityGithub\GAMES-2D-Cartas--Carlos\GAMES-2D-Cartas--Carlos\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAMotionEventCallbacks.h
