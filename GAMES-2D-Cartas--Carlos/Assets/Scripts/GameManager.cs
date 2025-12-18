@@ -84,6 +84,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void menuPausa(bool enable)
+    {
+        panelPausa.gameObject.SetActive(enable);
+    }
+
 
 
 
