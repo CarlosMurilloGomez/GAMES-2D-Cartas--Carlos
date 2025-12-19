@@ -14,6 +14,14 @@ public class menuManager : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public void jugar()
     {
         if (playerName.text.Trim() .Length > 1) {
